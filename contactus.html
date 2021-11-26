@@ -26,7 +26,7 @@
     ul#navigimi li {
         list-style-type: none;
         display: inline-block;
-        margin: 45px 30px 0px 0px;
+        margin: 10px 30px 0px 0px;
      
         
     }
@@ -37,16 +37,22 @@
         color:#21063b;
         font-size: 22px;
         background-color: #C1A2E1;
+        border-radius: 9px;
         }
-        #logo {
-        vertical-align: bottom;
-        margin-right: 15px;
-  
-     }
-    .MyDiv {
-      text-align: left;
+       
 
     
+ 
+    table{
+      margin: 60px auto;
+      
+    }
+    th, td {
+   padding: 3px 130px 3px 130px;
+   text-align: center;
+    }
+    tr th{
+      padding-bottom: 20px;
     }
  
 </style>
@@ -70,40 +76,43 @@
 </div>
 
 <ul id="navigimi">
-    <li><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
     <li><a href="#">Categories</a></li>
     <li><a href="#">Occasion</a></li>
-    <li><a href="#">Contact us</a></li>
+    <li><a href="contactus.html">Contact us</a></li>
 </ul>
 
    
 
   
-    <div style="text-align: left; width: 100%;">
-      <div  class="MyDiv" style="width: 83%;">
-        <img src="./images/addres.png" alt="Logo" width="135" height="130" id="logo">
-      </div>
-    
-    
-      
-      <h1 class="MyDiv">ADRESS</h1>
-    <p class="MyDiv">
-       <b>Lilium group contacting</b>
-        <br>
-      </p>
-      <p class="MyDiv">
-        xxx street
-      </p>
-      <p class="MyDiv">
-        Prishtine, zip code
-      </p>
-      <p class="MyDiv">
-        Kosove
-      </p>
-    </div>
-  </div>
-
+<table border="0">
+  <tr>
+    <td><img src="./images/addres.png" alt=""></td>
+    <td><img src="./images/phone.png" alt=""></td>
+    <td><img src="./images/email.png" alt=""></td>
+  </tr>
+  <tr style="font-size:30px; ">
+    <th >ADDRESS</th>
+    <th>PHONE</th>
+    <th>EMAIL</th>
+  </tr>
+  <tr>
+    <td>Contact</td>
+    <td>Lorem ipsum</td>
+    <td>Lorem impsum</td>
+  </tr>
+  <tr>
+    <td>Contact</td>
+    <td>Lorem ipsum</td>
+    <td>Lorem impsum</td>
+  </tr>
+  <tr>
+    <td>Contact</td>
+    <td>Lorem ipsum</td>
+    <td>Lorem impsum</td>
+  </tr>
+</table>
 
   </body>
 </html>
