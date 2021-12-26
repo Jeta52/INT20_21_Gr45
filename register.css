@@ -118,5 +118,9 @@ span{
 color:black;
 font-size: 15px;
 bottom: 30px;
-
+}
+#grad1 {
+  height: 200px;
+  background-color: #DB7093; /* For browsers that do not support gradients */
+  background-image: linear-gradient(#DB7093,  #fcf5ed);
 }
