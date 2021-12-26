@@ -68,3 +68,8 @@ ul#navigimi li a {
      background-color: #C1A2E1;
       border-radius: 10px;
   }
+
+  table td {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
