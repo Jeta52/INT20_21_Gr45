@@ -1,43 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <style>
-    body{
-        background-color: #fcf5ed;
-    }
-    #logoja {
-        vertical-align: bottom;
-        margin-right: 15px;
-    }
-    .div1 {
-       display: inline-block;
-    }
-    #LogIn,#Cart,#Favorites{
-        text-decoration: none;
-        color: #945eca;
-    }
-    #navigimi {
-        text-align: center;
-
-    }
-
-    ul#navigimi li {
-        list-style-type: none;
-        display: inline-block;
-        margin: 10px 30px 0px 0px;
-     
-        
-    }
-    ul#navigimi li a {
-        text-decoration: none;
-        padding: 12px 20px;
-        padding: 7px 20px;
-        color:#21063b;
-        font-size: 22px;
-        background-color: #C1A2E1;
-        border-radius: 9px;
-     
-    }
-      
+  <style>  
     table{
       margin-left: auto;
      margin-right: auto;
@@ -46,53 +9,39 @@
      border-radius: 10px;
      border-color: #945eca;
      background-color: #C1A2E1
-
     }
 
-   table p{
+    table p{
       margin: 0%;
       text-align: center;
       font-size: 24px;
     }
-    table img{
-      width : "180px";
-      height: "180";
+    .table img{
+      width : 180px;
+      height: 180px;
       border-radius: 5%;
     }
-    .fa {
+    .table2 img{
+      width: 400px;
+      height: 502px;
+      border-radius: 2%; 
+    }
+    #bordersh {
+  border: 3px solid;
   padding: 10px;
-  font-size: 30px;
-  width: 12px;
-  text-align: center;
-  text-decoration: none;
-  margin: 5px 2px;
-  border-radius: 40%;
+  box-shadow: 5px 10px #888888;
 }
-
-.fa:hover {
-    opacity: 0.7;
-}
-
-.fa-facebook {
-  background: #3B5998;
-  color: white;
-}
-
-.fa-twitter {
-  background: #55ACEE;
-  color: white;
-}
-.fa-instagram {
-  background: #cc4bc6;
-  color: white;
-}
+    
 </style>
   <head>
     <title>Lilium</title>
+   
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="occasions.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
   </head>
-<body> 
+
+  <body> 
   <div style="text-align: center; width: 100%;">
     <div  class="div1" style="width: 83%;">
         <img src="./images/logo.png" alt="Logo" width="135" height="130" id="logoja">
@@ -113,33 +62,35 @@
     <li><a href="occasions.html">Occasion</a></li>
     <li><a href="contactus.html">Contact us</a></li>
 </ul>
+
 <!-- Tabela e pare -->
-<table >
+
+<table class="table">
   <tr>
-    <td><p><i>Valentines</i></p><a href="#Valentines"><img src="./images/Valentines.jpg" alt="-" width= "180px" height="180"></a></td>
-    <td><p><i>Anniversary</i></p><a href="#Anniversary"><img src="./images/Anniversary.jpg" alt="-" width= "180px" height="180" ></a></td>
-    <td><p><i>Thank You</i></p><a href="#ThankYou"><img src="./images/ThankYou.jpg" alt="-" width= "180px" height="180"></a></td>
+    <td id="bordersh"><p><i>Valentines</i></p><a href="#Valentines"><img src="./images/Valentines.jpg" alt="Valentines"></a></td>
+    <td id="bordersh"><p><i>Anniversary</i></p><a href="#Anniversary"><img src="./images/Anniversary.jpg" alt="Anniversary"></a></td>
+    <td id="bordersh"><p><i>Thank You</i></p><a href="#ThankYou"><img src="./images/ThankYou.jpg" alt="hank You"></a></td>
   </tr>
   <tr>
-    <td><p><i>Get Well</i></p><a href="#GetWell"><img src="./images/GetWell.jpg" alt="-" width= "180px" height="180"></a></td>
-    <td><p><i>Birthday</i></p><a href="#Birthday"><img src="./images/Birthday.jpg" alt="-" width= "180px" height="180"></a></td>
-    <td><p><i>Christmas</i></p><a href="#Christmas"><img src="./images/Christmas.jpg" alt="-" width= "180px" height="180"></a></td>
+    <td id="bordersh"><p><i>Get Well</i></p><a href="#GetWell"><img src="./images/GetWell.jpg" alt="Get Well"></a></td>
+    <td id="bordersh"><p><i>Birthday</i></p><a href="#Birthday"><img src="./images/Birthday.jpg" alt="Birthday"></a></td>
+    <td id="bordersh"><p><i>Christmas</i></p><a href="#Christmas"><img src="./images/Christmas.jpg" alt="Christmas"></a></td>
   </tr>
 </table>
 
 <!-- Valentines-->
 
-<table style="margin: 60px auto;" id="Valentines">
+<table style="margin: 60px auto;" id="Valentines" class="table2">
   <tr>
       <td>
-              <img src="./images/valentines1.jpg" width="400px"  height="502px" alt="sale1"   border="1" style="border-radius: 2%; border-color: #C1A2E1;">
+              <img src="./images/valentines1.jpg" alt="Two Dozen Red Roses">
        
       </td>
       <td>
-              <img src="./images/valentines2.jpg" width="400px"  height="502px" alt="sale2"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+              <img src="./images/valentines2.jpg" alt="Red Rose & Calla Lily Bouquet">
       </td>
       <td>
-              <img src="./images/Valentines3.jpg" width="400px"   height="502px" alt="sale3"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+              <img src="./images/Valentines3.jpg" alt="Rose Bouquet">
       </td>
   </tr>
   <tr >
@@ -156,16 +107,16 @@
 
 <!-- Anniversary-->
 
-<table style="margin: 60px auto;" id="Anniversary">
+<table style="margin: 60px auto;" id="Anniversary" class="table2">
   <tr>
       <td>
-              <img src="./images/anniversary1.jpg" width="400px"  height="502px" alt="sale1"   border="1" style="border-radius: 2%; border-color: #C1A2E1;">
+          <img src="./images/anniversary1.jpg" alt="Kisses">
       </td>
       <td>
-              <img src="./images/anniversary2.jpg" width="400px"  height="502px" alt="sale2"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+          <img src="./images/anniversary2.jpg" alt="Beauty">
       </td>
       <td>
-              <img src="./images/anniversary3.jpg" width="400px"  height="502px" alt="sale3"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+          <img src="./images/anniversary3.jpg" alt="Lotsa Lav">
       </td>
   </tr>
   <tr >
@@ -182,16 +133,16 @@
 
 <!-- Thank You-->
 
-<table style="margin: 60px auto;" id="ThankYou">
+<table style="margin: 60px auto;" id="ThankYou" class="table2">
   <tr>
       <td>
-              <img src="./images/thankyou1.jpg" width="400px"  height="502px" alt="sale1"   border="1" style="border-radius: 2%; border-color: #C1A2E1;">
+              <img src="./images/thankyou1.jpg" alt="Rainbow Baby's Breath">
       </td>
       <td>
-              <img src="./images/thankyou2.jpg" width="400px"  height="502px" alt="sale2"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+              <img src="./images/thankyou2.jpg" alt="Modern Romance - Pink">
       </td>
       <td>
-              <img src="./images/thankyou3.jpg" width="400px"  height="502px" alt="sale3"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+              <img src="./images/thankyou3.jpg" alt="Queen of Grace">
       </td>
   </tr>
   <tr >
@@ -208,16 +159,16 @@
 
 <!-- Get Well-->
 
-<table style="margin: 60px auto;" id="GetWell">
+<table style="margin: 60px auto;" id="GetWell" class="table2">
   <tr>
       <td>
-              <img src="./images/getwell1.jpg" width="400px"  height="502px" alt="sale1"   border="1" style="border-radius: 2%; border-color: #C1A2E1;">
+              <img src="./images/getwell1.jpg" alt="Pretty You">
       </td>
       <td>
-              <img src="./images/getwell2.jpg" width="400px"  height="502px" alt="sale2"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+              <img src="./images/getwell2.jpg" alt="Bloom Basket">
       </td>
       <td>
-              <img src="./images/getwell3.jpg" width="400px"  height="502px" alt="sale3"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+              <img src="./images/getwell3.jpg" alt="Wild Spirit" >
       </td>
   </tr>
   <tr >
@@ -234,16 +185,16 @@
 
 <!-- Birthday -->
 
-<table style="margin: 60px auto;" id="Birthday">
+<table style="margin: 60px auto;" id="Birthday" class="table2">
     <tr>
         <td>
-                <img src="./images/birthday1.jpg" width="400px"  height="502px" alt="sale1"   border="1" style="border-radius: 2%; border-color: #C1A2E1;">
+                <img src="./images/birthday1.jpg" alt="Just for you">
         </td>
         <td>
-                <img src="./images/birthday2.jpg" width="400px"  height="502px" alt="sale2"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+                <img src="./images/birthday2.jpg" alt="Always Yours">
         </td>
         <td>
-                <img src="./images/birthday3.jpg" width="400px"  height="502px" alt="sale3"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+                <img src="./images/birthday3.jpg" alt="Sweet Cupcake">
         </td>
     </tr>
     <tr >
@@ -260,16 +211,16 @@
 
   <!-- Christmas -->
 
-<table style="margin: 60px auto;" id="Christmas">
+<table style="margin: 60px auto;" id="Christmas" class="table2">
     <tr>
         <td>
-                <img src="./images/christmas1.jfif" width="400px"  height="502px" alt="sale1"   border="1" style="border-radius: 2%; border-color: #C1A2E1;">
+            <img src="./images/christmas1.jfif" alt="Gilded Elegance Wreath">
         </td>
         <td>
-                <img src="./images/christmas2.jfif" width="400px"  height="502px" alt="sale2"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+            <img src="./images/christmas2.jfif" alt="Faux Magnolia Wreath">
         </td>
         <td>
-                <img src="./images/christmas3.jfif" width="400px"  height="502px" alt="sale3"  border="1"  style="border-radius: 2%; border-color: #C1A2E1;">
+            <img src="./images/christmas3.jfif" alt="Gilded Elegance Wreath">
         </td>
     </tr>
     <tr >
@@ -283,7 +234,9 @@
         <td><p style="text-align: left; font-size: 24px;">77.70 &euro;</p></td>
     </tr>
   </table>
+
 <!--Footer-->
+
 <footer class="footer">
   <div class="footer-col">
     <h4>company</h4>
