@@ -1,0 +1,69 @@
+body{
+  background-color: #fcf5ed;
+}
+#logoja {
+  vertical-align: bottom;
+  margin-right: 15px;
+}
+.div1 {
+ display: inline-block;
+}
+#LogIn,#Cart,#Favorites{
+  text-decoration: none;
+  color: #945eca;
+}
+#navigimi {
+  text-align: center;
+
+}
+
+ul#navigimi li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 10px 30px 0px 0px;
+
+  
+}
+ul#navigimi li a {
+  text-decoration: none;
+  padding: 7px 20px;
+  color:#21063b;
+  font-size: 22px;
+  background-color: #C1A2E1;
+  border-radius: 9px;
+}
+p{
+  margin: 0;
+}
+.fa {
+padding: 10px;
+font-size: 30px;
+width: 12px;
+text-align: center;
+text-decoration: none;
+margin: 5px 2px;
+border-radius: 40%;
+}
+
+.fa:hover {
+opacity: 0.7;
+}
+
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+.fa-instagram {
+background: #cc4bc6;
+color: white;
+}
+h1{
+text-align: center;
+margin: 0;
+font-size: 35px;
+}
