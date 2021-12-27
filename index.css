@@ -84,30 +84,23 @@ font-size: 35px;
 #myCanvas:hover{
   transform: scale(2,1);
 }
+@font-face {
+  font-family: 'Times New Roman';
+  src: url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+}
 #divTXT{
   width: 40%; 
   float: right; 
   margin-right: 100px;
    margin-top: 20px; 
    border-width: 15px; 
-  ;
+   font-family:'Times New Roman';
+   font-size: 25px;
+   word-wrap: break-word; 
+  
 }
 #divTXT:hover{
    transform: rotateY(180deg)
-}
-/*CSS i SVG*/
-svg{
-	width:100%;
-	height:100px;
-}
-
-.fc1 { fill: violet;  }
-.fc2 { fill: hotpink; }
-.fc3 { fill: lavender;}
-.fc4 { fill: skyblue; }
-
-svg path {
-	fill: inherit;
 }
 
 /*CSS i buttonit per cart*/
