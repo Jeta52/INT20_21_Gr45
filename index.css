@@ -72,3 +72,67 @@ font-size: 35px;
   background-color: #DB7093; /* For browsers that do not support gradients */
   background-image: linear-gradient(#DB7093, #fcf5ed );
 }
+.divVid{
+  display: inline-block;
+ 
+}
+#borderimg1 { 
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(./images/BackIMG.png) 30 stretch;
+}
+#myCanvas:hover{
+  transform: scale(2,1);
+}
+#divTXT{
+  width: 40%; 
+  float: right; 
+  margin-right: 100px;
+   margin-top: 20px; 
+   border-width: 15px; 
+  ;
+}
+#divTXT:hover{
+   transform: rotateY(180deg)
+}
+
+/*CSS i buttonit per cart*/
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #6b7ea8;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 13px;
+  padding: 9px;
+  width: 130px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

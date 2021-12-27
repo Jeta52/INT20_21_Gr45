@@ -4,8 +4,8 @@
     table{
       margin: 30px auto;
       }
-
   </style>
+
   <head>
     <title>Lilium</title>
     <link rel="stylesheet" href="about.css">
@@ -20,7 +20,8 @@
         <i style="color: #C1A2E1; font-size: 120px; font-family: Brush Script MT;" >Lilium</i>
     </div>
     <div class = "div1" style="text-align: left;" >
-      <a href="login.html" id="LogIn"><big>&#127804; Log In</big> </a><br>
+      <a href="login.html" id="LogIn" ><big><big>&#127804; Log In</big></big> </a><br>
+      <a href="cart.html" id="Cart"><big><big>&#127799; Cart</big></big> </a><br>
       <a href="https://www.facebook.com/Lilium-107060001813022/" target="_blank" class="fa fa-facebook"></a>
       <a href="https://twitter.com/Lilium18392954"  target="_blank" class="fa fa-twitter"></a>
       <a href="https://www.instagram.com/liliumflowershop1/" target="_blank" class="fa fa-instagram"></a>
@@ -37,7 +38,8 @@
     <!--Tabela 1-->
     <table border="1">
       <tr>
-        <td>
+        <td style="background-image: url(./images/backABOUT8.jpg);">
+          <section>
           <p style="padding-left: 20px;"><i>Jeta Kajtazi and Jet&#235; Laj&#231;i are the owners and creative directors of Lilium (<i>flowershop</i>). In 2020 they launched Lilium to celebrate the everyday along with special days. True to that aim, their florals have been featured in many famous magazines and blogs. Lilium carries fresh cut flowers, bouquets, dried flower crowns, and a thoughtful selection of vases. <br>
           Jeta and Jet&#235; are two computer engineering students from Peja.<br>
           You can pick out the most gorgeous flowers in our physical store (as seen in the pic), or through our webpage.<br><br><br>
@@ -52,7 +54,8 @@
             <li>Professional services</li>
           </ol>
           </i></p>
-
+          </section>
+          </td>
           <td>
               <img src="./images/flowershop.jpg" alt="store" height="315px" align="left">
           </td>
@@ -67,7 +70,8 @@
         <td>
             <img src="./images/greenhouse.jpg" alt="greenhouse" height="300px">
         </td>
-        <td>
+        <td style="background-image: url(./images/backABOUT8.jpg); ">
+          <article>
           <p><big><i>
           <ul>
             <li>
@@ -83,6 +87,7 @@
             </li>
           </ul>
           </i></big></p>
+        </article>
         </td>
       </tr>
     </table>
@@ -94,7 +99,9 @@
         <td>
             <img src="./images/wrappings.jpg" alt="wrappings" height="345px">
         </td>
-        <td><I>
+        <td style="background-image: url(./images/backABOUT8.jpg); ">
+          <article>
+          <I>
           <h2 style="text-align: center;">Why choose organic wrappings for our flowers?</h2>
           <p style="padding: 20px;"> The <abbr title="Certified Organic Cotton">COC </abbr> The most notable difference between Organic Cotton and regular cotton is that the cotton is grown without the use of harmful pesticides. Traditional cotton is accountable for almost 25% of all chemical pesticides used in agriculture, and nearly 50% of the textile market uses cotton, which means a LOT of chemicals are seeping into our earth! Inevitably over time this increases green house gases and the likelihood of contamination of the same soil that may grow our children’s, children’s vegetables. We think that is a BIG deal.           
             To be considered 100% organic, our cotton has to meet a very strict approval process. The certifier has approved every step in the process from cotton to the finished goods. The process begins from the time the cotton is grown, to how the cotton is transported to the mill, how it is milled, how it is bleached using oxygen based bleach (non chlorine), how the cotton is printed using Low Impact Dyes, and must also meet a standard of fair working conditions set by the <abbr title="International Labour Organization">ILO</abbr>. At the end of the process a certificate is provided to ensure that all of these standards have been met and approved.
@@ -102,12 +109,38 @@
             Most importantly, you can rest assured that the Birch Organic fabrics you are bringing into your home are beautiful, and safe for our planet and your family.
           </p>
         </I>
-    
+        </article>
         </td>
       </tr>
     </table>
-
-
+  
+      
+    <br><br><br><br>
+    <div align="center">
+      <canvas  id="myCanvas" width="600" height="50">
+        Your browser does not support the canvas element.
+      </canvas>
+    </div> 
+    <div align="center">
+      <video style="width: 70%; border-radius: 1%;" control>
+        <source src="./images/video1.mp4" type="video/mp4">
+     
+      </video>
+    </div>
+    <div align="center">
+      <h2>How to Open a Flower Shop Right | Six Things to do Before Starting</h2>
+      <audio controls>
+        <source src="./images/audio1.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  
+    <div align="center" style="margin-bottom: 50px;">
+    <h2>The Power of Flowers | Lewis Miller | TEDxCharlottesville</h2>
+      <audio controls>
+        <source src="./images/audio2.mp3" type="audio/mp3">
+      </audio>
+    </div>
+  
     <!--Footer-->
     <div id="grad">
       <footer class="footer" id="grad1">
@@ -156,5 +189,15 @@
           Created by Grupi <sub>45</sub> &copy 2021 All rights reserved.</p>
      </div>
   </div>
+  <script >
+    
+var canvas = document.getElementById("myCanvas");
+var ctx=canvas.getContext("2d");
+ctx.font="30px Comic Sans MS";
+ctx.fillStyle = "black";
+ctx.textAlign = "center";
+ctx.fillText("Tulip Handtied/ Wrapping", canvas.width/2, canvas.height/2);
+ 
+  </script>
   </body>
 </html>
