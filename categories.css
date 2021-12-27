@@ -7,7 +7,6 @@ body{
 }
 .div1 {
  display: inline-block;
- box-sizing: border-box;
 }
 #LogIn,#Cart,#Favorites{
   text-decoration: none;
@@ -34,6 +33,27 @@ ul#navigimi li a {
   background-color: #C1A2E1;
   border-radius: 9px;
 
+}
+/*CSS per animation*/
+#container {
+  width: 400px;
+  height: 400px;
+  margin: 10px auto;
+  position: relative;
+  border-radius: 50%;
+  animation: spin 10s linear infinite;
+}
+.item {  
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  animation: spin 10s linear infinite reverse;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(1turn);
+  }
 }
 
 #Roses , #Tulips ,  #Lilac , #Gladiolus , #Callallilli{
