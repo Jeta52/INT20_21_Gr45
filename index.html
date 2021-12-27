@@ -147,9 +147,25 @@
 </table>
 <br><br><br><br><br>
 
-<canvas style="width:1300px; height: 10px; " id="myCanvas"> </canvas>
+<canvas style="width:1300px; height: 10px; margin: 0px;" id="myCanvas"> </canvas>
+<!--SVG-->
+<svg id=svg >
+	<defs>
+	<g id="flower">
+		<path class="fc1" fill="none" stroke="#333333" stroke-width="1" 
+			  d="M0,0 q50,-25 100,0 q-50,25 -100,0 q-50,25 -100,0 q50,-25 100,0"/>	
+		<path class="fc2" fill="none" stroke="#333333" stroke-width="1"
+					d="M0,0 q53.03,-17.68 70.71,-70.71 q-53.03,17.68 -70.71,70.71 q-53.03,17.68 -70.71,70.71 q53.03,-17.68 70.71,-70.71"/>
+		<path class="fc3" fill="none" stroke="#333333" stroke-width="1"
+				  d="M0,0 q25,-50 0,-100 q-25,50 0,100 q-25,50 0,100 q25,-50 0,-100"/>
+		<path class="fc4" fill="none" stroke="#333333" stroke-width="1"
+				  d="M0,0 q-17.68,-53.03 -70.71,-70.71 q17.68,53.03 70.71,70.71 q17.68,53.03 70.71,70.71 q-17.68,-53.03 -70.71,-70.71"/>
+	</g>
+	</defs>
+</svg>
 
-<div align="center" style="margin-top: 100px; margin-bottom: 50px;">
+
+<div align="center" style=" margin-bottom: 50px;">
     <div style="width: 50%;" class="divVid" align="center" >
         <video style="width: 70%; border-radius: 2%;" controls  >
             <source src="./images/video2.mp4" type="video/mp4">
@@ -164,7 +180,6 @@
         </p>
     </div>
 </div>
-
 
 
 <!--Footer-->
@@ -220,4 +235,7 @@
     ctx.fillStyle =grd;
     ctx.fillRect(50,20,300,100);
 </SCRipt>
+
+<script type="text/javascript" src="index.js"></script>
+
 </html>

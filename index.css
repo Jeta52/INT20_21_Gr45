@@ -95,6 +95,20 @@ font-size: 35px;
 #divTXT:hover{
    transform: rotateY(180deg)
 }
+/*CSS i SVG*/
+svg{
+	width:100%;
+	height:100px;
+}
+
+.fc1 { fill: violet;  }
+.fc2 { fill: hotpink; }
+.fc3 { fill: lavender;}
+.fc4 { fill: skyblue; }
+
+svg path {
+	fill: inherit;
+}
 
 /*CSS i buttonit per cart*/
 .button {
