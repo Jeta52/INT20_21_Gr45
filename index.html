@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
+
+<head>
+     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Lilium</title>
+
+    <style>
     table td img{
         width:300px ;
         height:402px;
@@ -19,17 +29,10 @@
   text-shadow: 4px 4px rgb(184, 181, 181);
 }
 
-
 </style>
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Lilium</title>
+   
 </head>
+
 <body>
     
     <div style="text-align: center; width: 100%;">
@@ -39,7 +42,6 @@
         </div>
         <div class = "div1" style="text-align: left;" >
             <a href="login.html" id="LogIn" ><big><big>&#127804; Log In</big></big> </a><br>
-            <a href="cart.html" id="Cart"><big><big>&#127799; Cart</big></big> </a><br>
             <a href="https://www.facebook.com/Lilium-107060001813022/" target="_blank" class="fa fa-facebook"></a>
             <a href="https://twitter.com/Lilium18392954"  target="_blank" class="fa fa-twitter"></a>
             <a href="https://www.instagram.com/liliumflowershop1/" target="_blank" class="fa fa-instagram"></a> 
@@ -54,7 +56,8 @@
         <li><a href="occasions.html">Occasion</a></li>
         <li><a href="contactus.html">Contact us</a></li>
     </ul>
-  <br>    
+    <br>    
+
     <!--Tabela per sales-->
     <h1>Sales</h1>
     <table >
@@ -85,6 +88,7 @@
             <td><a href="login.html"><button class="button" style="vertical-align:middle"><span>Add to cart </span></button></a></td>
         </tr>
     </table>
+
     <!--Tabela per new Arrivals-->
     <br><br>
     <h1>New Arrivals</h1>
@@ -115,6 +119,7 @@
             <td><a href="login.html"><button class="button" style="vertical-align:middle"><span>Add to cart </span></button></a></td>
             <td><a href="login.html"><button class="button" style="vertical-align:middle"><span>Add to cart </span></button></a></td>
     </table>
+
  <!--Tabela per Best sellers-->
     <br><br>
     <h1>Best Sellers</h1>
@@ -148,16 +153,33 @@
 </table>
 <br><br><br><br><br>
 
-<canvas style="width:1300px; height: 10px; " id="myCanvas"> </canvas>
+<canvas style="width:1300px; height: 10px; margin: 0px;" id="myCanvas"> </canvas>
 
-<div align="center" style="margin-top: 100px; margin-bottom: 50px;">
+<!--SVG-->
+<svg id=svg >
+	<defs>
+	<g id="flower">
+		<path class="fc1" fill="none" stroke="#333333" stroke-width="1" 
+			  d="M0,0 q50,-25 100,0 q-50,25 -100,0 q-50,25 -100,0 q50,-25 100,0"/>	
+		<path class="fc2" fill="none" stroke="#333333" stroke-width="1"
+					d="M0,0 q53.03,-17.68 70.71,-70.71 q-53.03,17.68 -70.71,70.71 q-53.03,17.68 -70.71,70.71 q53.03,-17.68 70.71,-70.71"/>
+		<path class="fc3" fill="none" stroke="#333333" stroke-width="1"
+				  d="M0,0 q25,-50 0,-100 q-25,50 0,100 q-25,50 0,100 q25,-50 0,-100"/>
+		<path class="fc4" fill="none" stroke="#333333" stroke-width="1"
+				  d="M0,0 q-17.68,-53.03 -70.71,-70.71 q17.68,53.03 70.71,70.71 q17.68,53.03 70.71,70.71 q-17.68,-53.03 -70.71,-70.71"/>
+	</g>
+	</defs>
+</svg>
+
+
+<div align="center" style=" margin-bottom: 50px;">
     <div style="width: 50%;" class="divVid" align="center" >
         <video style="width: 70%; border-radius: 2%;" controls  >
             <source src="./images/video2.mp4" type="video/mp4">
           </video>
     </div>
     <div id="divTXT"class="divVid" align="center">
-        <p id="borderimg1">
+        <p id="borderimg1" style="font-size: 25px; font-family: 'Times New Roman'; word-wrap: break-word;  ">
             The biggest reason we give flowers as gifts is to <b>connect with an emotion</b> .
              Whether its <i> love, joy, affection, appreciation, sympathy, romance or apologies</i>; flower 
             giving communicates the deepest feelings in the most elegant manner.
@@ -165,7 +187,6 @@
         </p>
     </div>
 </div>
-
 
 
 <!--Footer-->
@@ -212,6 +233,7 @@
       <p id="AllRights" style="text-align: center;  margin-top: 10px;">Created by Grupi <sub>45</sub> &copy 2021 All rights reserved.</p>
   </div>
 </body>
+
 <SCRipt>
     var c = document.getElementById("myCanvas");
     var ctx= c.getContext("2d");
@@ -221,4 +243,7 @@
     ctx.fillStyle =grd;
     ctx.fillRect(50,20,300,100);
 </SCRipt>
+
+<script type="text/javascript" src="index.js"></script>
+
 </html>

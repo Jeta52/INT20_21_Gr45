@@ -7,9 +7,11 @@
     border-radius: 2%;
   }
   .table img:hover {
-        transform: scale(1.01, 1.01);
-    }
- 
+    transform: scale(1.01, 1.01);
+  }
+  #tabela1 img:hover{
+    transform: scale(1.3,1.3);
+  }
 </style>
   <head>
     <title>Lilium</title>
@@ -29,7 +31,6 @@
     </div>
     <div class = "div1" style="text-align: left;" >
       <a href="login.html" id="LogIn" ><big><big>&#127804; Log In</big></big> </a><br>
-      <a href="cart.html" id="Cart"><big><big>&#127799; Cart</big></big> </a><br>
         <a href="https://www.facebook.com/Lilium-107060001813022/" target="_blank" class="fa fa-facebook"></a>
         <a href="https://twitter.com/Lilium18392954"  target="_blank" class="fa fa-twitter"></a>
         <a href="https://www.instagram.com/liliumflowershop1/" target="_blank" class="fa fa-instagram"></a>
@@ -43,11 +44,7 @@
     <li><a href="occasions.html">Occasion</a></li>
     <li><a href="contactus.html">Contact us</a></li>
 </ul>
-<style>
-#tabela1 img:hover{
-transform: scale(1.3,1.3);
-}
-</style>
+
 <br><br><br><br>
 
 <!--JavaScript for animation-->
@@ -79,10 +76,10 @@ transform: scale(1.3,1.3);
       </td>
   </tr>
   <tr >
-    <td ><p style="text-align: left;"><i><b>Climbing Roses</b></i></p></td>
-      <td ><p style="text-align: left;"><i><b>Floribunda Roses </b></i></p></td>
-        <td ><p style="text-align: left;"><i><b>Hybrid Tea Roses</b></i></p></td>
-          <td ><p style="text-align: left;"><i><b>Grandiflora Roses</b></i></p></td>
+    <td><p style="text-align: left;"><i><b id="climbingRoses"></b></i></p></td>
+    <td><p style="text-align: left;"><i><b id="FloribundaRoses"> </b></i></p></td>
+    <td><p style="text-align: left;"><i><b id="HybridTeaRoses"></b></i></p></td>
+    <td><p style="text-align: left;"><i><b id="GrandifloraRoses"></b></i></p></td>
   </tr>
   <tr>
       <td><p style="text-align: left; font-size: 24px;">49.99 &euro;</p></td>
@@ -117,16 +114,16 @@ transform: scale(1.3,1.3);
     </td>
   </tr>
   <tr >
-    <td ><p style="text-align: left;"><i><b>Furand Tulip</b></i></p></td>
-      <td ><p style="text-align: left;"><i><b>Lifestyle Tulip </b></i></p></td>
-        <td ><p style="text-align: left;"><i><b>Golden Tulip</b></i></p></td>
-          <td ><p style="text-align: left;"><i><b>Margarita Tuli</b></i></p></td>
+    <td ><p style="text-align: left;"><i><b id="Furand"></b></i></p></td>
+    <td ><p style="text-align: left;"><i><b id="Lifestyle"> </b></i></p></td>
+    <td ><p style="text-align: left;"><i><b id="Golden"></b></i></p></td>
+    <td ><p style="text-align: left;"><i><b id="Margarita"></b></i></p></td>
   </tr>
   <tr>
-      <td><p style="text-align: left; font-size: 24px;">29.99 &euro;</p></td>
-      <td><p style="text-align: left; font-size: 24px;">39.99 &euro;</p></td>
-      <td><p style="text-align: left; font-size: 24px;">39.99 &euro;</p></td>
-      <td><p style="text-align: left; font-size: 24px;">29.99 &euro;</p></td>
+      <td><p style="text-align: left; font-size: 24px;" id="cmimi1"> </p></td>
+      <td><p style="text-align: left; font-size: 24px;" id="cmimi2"> </p></td>
+      <td><p style="text-align: left; font-size: 24px;" id="cmimi3"> </p></td>
+      <td><p style="text-align: left; font-size: 24px;" id="cmimi4"> </p></td>
   </tr>
   <tr>
     <td><a href="login.html"><button class="button" style="vertical-align:middle"><span>Add to cart </span></button></a></td>
@@ -293,17 +290,17 @@ transform: scale(1.3,1.3);
 
 <script type="text/javascript">
     var radius = 150; // adjust to move out items in and out 
-var fields = $('.item'),
+    var fields = $('.item'),
   container = $('#container'),
   width = container.width(),
   height = container.height();
-var angle = 0,
+  var angle = 0,
   step = (2 * Math.PI) / fields.length;
-fields.each(function() {
+  fields.each(function() {
   var x = Math.round(width / 2 + radius * Math.cos(angle) - $(this).width() / 2);
   var y = Math.round(height / 2 + radius * Math.sin(angle) - $(this).height() / 2);
   if (window.console) {
-    console.log($(this).text(), x, y);
+  console.log($(this).text(), x, y);
   }
   $(this).css({
     left: x + 'px',
@@ -312,6 +309,6 @@ fields.each(function() {
   angle += step;
 });
 </script>
-
+<script type="text/javascript" src="categories.js"></script>
 </body>
 </html>

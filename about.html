@@ -4,6 +4,26 @@
     table{
       margin: 30px auto;
       }
+      input[type=number] {
+            width: 10%;
+            padding: 10px 20px;
+            margin: 4px 2px;
+            box-sizing: border-box;
+            border: 2px solid  #C1A2E1;
+            border-radius: 4px;
+        }
+
+          #submit{
+            width: 10%;
+            background-color: #C1A2E1;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+            border: 2px solid  #9951e0;
+            border-radius: 4px;
+        }
   </style>
 
   <head>
@@ -12,8 +32,10 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta charset="UTF-8">
+  
   </head>
-  <body> 
+
+  <body  onload="startTimer()"> 
   <div style="text-align: center; width: 100%;">
     <div  class="div1" style="width: 83%;">
         <img src="./images/logo.png" alt="Logo" width="135" height="130" id="logoja">
@@ -21,7 +43,6 @@
     </div>
     <div class = "div1" style="text-align: left;" >
       <a href="login.html" id="LogIn" ><big><big>&#127804; Log In</big></big> </a><br>
-      <a href="cart.html" id="Cart"><big><big>&#127799; Cart</big></big> </a><br>
       <a href="https://www.facebook.com/Lilium-107060001813022/" target="_blank" class="fa fa-facebook"></a>
       <a href="https://twitter.com/Lilium18392954"  target="_blank" class="fa fa-twitter"></a>
       <a href="https://www.instagram.com/liliumflowershop1/" target="_blank" class="fa fa-instagram"></a>
@@ -35,6 +56,7 @@
       <li><a href="contactus.html">Contact us</a></li>
     </ul>
     <br><br>
+
     <!--Tabela 1-->
     <table border="1">
       <tr>
@@ -57,7 +79,7 @@
           </section>
           </td>
           <td>
-              <img src="./images/flowershop.jpg" alt="store" height="315px" align="left">
+              <img  src="./images/flowershop.jpg" alt="store" height="315px" align="left" id="flowersshop">
           </td>
       </tr>
     </table>
@@ -68,7 +90,7 @@
     <table border="1">
       <tr>
         <td>
-            <img src="./images/greenhouse.jpg" alt="greenhouse" height="300px">
+            <img src="./images/greenhouse.jpg" alt="greenhouse" height="300px" id="greenhouse">
         </td>
         <td style="background-image: url(./images/backABOUT8.jpg); ">
           <article>
@@ -97,7 +119,7 @@
     <table border="1">
       <tr>
         <td>
-            <img src="./images/wrappings.jpg" alt="wrappings" height="345px">
+            <img src="./images/wrappings.jpg" alt="wrappings" height="345px" id="wrapp">
         </td>
         <td style="background-image: url(./images/backABOUT8.jpg); ">
           <article>
@@ -122,9 +144,8 @@
       </canvas>
     </div> 
     <div align="center">
-      <video style="width: 70%; border-radius: 1%;" control>
+      <video style="width: 70%; border-radius: 1%;" controls>
         <source src="./images/video1.mp4" type="video/mp4">
-     
       </video>
     </div>
     <div align="center">
@@ -140,6 +161,31 @@
         <source src="./images/audio2.mp3" type="audio/mp3">
       </audio>
     </div>
+    <div align="center" style="font-size: 30px;">
+      <table>
+          <tr>
+              <td> &#127804; <i>+</i>  &#127804;<i>+</i>   &#127804;  <i> = 30 </i></td>
+          </tr>
+          <tr>
+              <td> &#127804; <i>+</i>   &#127801;<i>+</i>  &#127801;  <i> = 18 </i></td>
+          </tr>
+          <tr>
+              <td> &#127804; <i>-</i>  &#127800;  <i> = 2 </i></td>
+          </tr>
+          <tr>
+              <td> &#127800; <i>+</i> &#127804;<i>+</i>   &#127801; <i> = ? </i>  </td>
+          </tr>
+      
+      </table>
+  </div>
+
+          <div align="center">
+              <form name="detyra" onsubmit="return detyraArgetuese()">
+              <input type="number" name="answer">
+              <keygen name="security">
+              <input type="submit" value="Submit" id="submit"></input>
+              </form>
+        </div>
   
     <!--Footer-->
     <div id="grad">
@@ -171,7 +217,7 @@
           <input type="radio" id="r5" name="rg1">
           <br>
           <label for="r5">&#160;</label>
-          <input type="submit" name="Sumbit" id="submit" style="margin: 20px auto;">
+          <input type="submit" name="Sumbit" style="margin: 20px auto;">
 
         </form>  
 
@@ -189,15 +235,9 @@
           Created by Grupi <sub>45</sub> &copy 2021 All rights reserved.</p>
      </div>
   </div>
-  <script >
-    
-var canvas = document.getElementById("myCanvas");
-var ctx=canvas.getContext("2d");
-ctx.font="30px Comic Sans MS";
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.fillText("Tulip Handtied/ Wrapping", canvas.width/2, canvas.height/2);
- 
-  </script>
+
+
+<script type="text/javascript" src="about.js"></script>
   </body>
+  
 </html>
