@@ -62,6 +62,17 @@
       });
       });
       </script>
+      <script type="text/javascript">
+        $(document).ready(function()
+        {
+           $("p").click(function()
+         {
+           $(".videof").hide();
+       
+         });
+        });
+      </script>
+
 
   <head>
     <title>Lilium</title>
@@ -180,7 +191,8 @@
         Your browser does not support the canvas element.
       </canvas>
     </div> 
-    <div align="center">
+    <p><i>Do not show the video</i></p>
+    <div align="center" class="videof">
       <video style="width: 70%; border-radius: 1%;" controls>
         <source src="./images/video1.mp4" type="video/mp4">
       </video>
