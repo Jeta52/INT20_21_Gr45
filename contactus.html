@@ -38,7 +38,9 @@
    #mesazhi{
     width: 70%;
    }
-   
+   #test{
+       display: none;
+   }
 </style>
 
 <head>
@@ -163,9 +165,9 @@ $(function(){
     <td  style="vertical-align: top; padding: 0px 15px 0px 15px;">
       <mark>Lilium Group Contracting:</mark>
       <br><br> 
-      <u>+383 49 300 300</u>
-        <br><br> 
-        <u>+ 383 44 400 400</u>
+        <p  id="btn1" style="margin-top: 0px; margin-bottom: 0px;"><u>+383 49 300 300</u></p>
+        <br>
+        <p id="btn2" style="margin-top: 0px; margin-bottom: 0px;"><u>+ 383 44 400 400</u></p>
         <br>
         
         <div class="ContactUs">
@@ -206,7 +208,7 @@ $(function(){
   </tr>
 
 </table>
-
+<p id="test">Mund te thirrni prej 8:00 deri 19:00, nga e Hena deri te Shtunen!</p>
 
 <!--Footer-->
 <footer class="footer" id="grad1">
@@ -265,6 +267,16 @@ $(function(){
     function showPosition(position) {
     x.innerHTML = position.coords.latitude + "&deg;, " + position.coords.longitude + "&deg; ";
     }
+
+    $(document).ready(function(){
+      $("#btn1").click(function(){
+        alert( $("#test").text());
+      });
+
+    $("#btn2").click(function(){
+        alert( $("#test").text());
+      });
+    });
 </script>
   </body>
 </html>
