@@ -40,6 +40,10 @@
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="jquery-3.6.0.min"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+ 
+
+
 <script type="text/javascript">
 $(function(){
   $("#emri").focus(function(){
@@ -54,6 +58,31 @@ $(function(){
 }
 );
 </script>
+<script>
+  function bigLoop()
+  {
+    if(Modernizr.webworkers)
+    {
+      var worker = new Worker ('jquery-3.6.0.min.js');
+      worker.onmessage = function (event)
+      {
+        alert("Complicated"+ event.data + "iterations");
+    
+      };
+
+    }
+    else 
+    {
+      alert("Sorry !! you do not have web workers support.");
+    }
+  }
+  function sayHello()
+  {
+    alert("Hello From..");
+
+  }
+</script>
+
  
 
 
@@ -62,6 +91,8 @@ $(function(){
 
 <body> 
   
+  <input type="button" onclick=" bigLoop()" value="Big Loop"/>
+  <input type="button" onclick=" sayHello()" value="Say Hello"/>
   
   
   <div style="text-align: center; width: 100%;">
