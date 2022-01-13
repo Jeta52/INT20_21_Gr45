@@ -28,6 +28,16 @@
       transform: skewX(5deg);
     }
  
+    .pQ1{
+     margin: 0;
+   }
+   #emri, #email{
+     width: 70%;
+     height: 20px;
+   }
+   #mesazhi{
+    width: 70%;
+   }
    
 </style>
 
@@ -89,7 +99,7 @@ $(function(){
 
 </head>
 
-<body> 
+<body onload="getLocation()">
   
   <input type="button" onclick=" bigLoop()" value="Big Loop"/>
   <input type="button" onclick=" sayHello()" value="Say Hello"/>
@@ -120,90 +130,84 @@ $(function(){
 
   
 <table border="0">
+  <!--Rreshti i pare-->
   <tr>
     <td><img src="./images/addres.png" alt=""></td>
     <td><img src="./images/phone.png" alt=""></td>
     <td><img src="./images/email.png" alt=""></td>
   </tr>
+    <!--Rreshti i dyte-->
   <tr style="font-size:30px;">
     <th >ADDRESS</th>
     <th>PHONE</th>
     <th>EMAIL</th>
   </tr>
+    <!--Rreshti i trete-->
   <tr>
-    <td><mark>Lilium Group Contacting:</mark></td>
-    <td><mark>Lilium Group Contracting:</mark></td>
-    <td><mark>Request for Proposal:</mark></td>
-  </tr>
-  <tr>
-    <td><address>
-      
-      32 Muharrem Fejza, Prishtine<br>
-      Kosove<br>
-      10200
-      </address></td>
-    <td><u>+383 49 300 300</u></td>
-    <td><a href = "mailto: info@liliumgroup.com">info@liliumgroup.com</a></td>
-  </tr>
-  <tr>
-    <td></td>
-    <td><u>+ 383 44 400 400</u></td>
-    <td><mark>Employment Opportunities:</mark>
-   </td>
-  </tr>
+            <!--Qeliza 1-->
+    <td  style="vertical-align: top;" > 
+      <mark>Lilium Group Contacting:</mark>
+      <br><br> 
+       <address>32 Muharrem Fejza, Prishtine<br>Kosove<br>10200<br></address>
+          <div class="iframe">
+            <br>
+            <p class="pQ1" style="font-size: 13px; ">From you: </p>
+            <p class="pQ1" id="geo" style="font-weight: 900;"></p>
+            <p class="pQ1" style="font-size: 13px; ">To us: </p>
+            <p class="pQ1" style="font-weight: 900;">32.6576972&deg;, 11.1505525&deg;</p>
+            <iframe style="width:200px; height:200px; margin-top: 10px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26292.324209542523!2d20.70990406128685!3d42.78888340976849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13534009514dd657%3A0xb71b1dea8ed7cbf6!2sKosovo!5e0!3m2!1sen!2s!4v1607794764498!5m2!1sen!2s" width="1290" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+
+    </td>
+             <!--Qeliza 2-->
+    <td  style="vertical-align: top; padding: 0px 15px 0px 15px;">
+      <mark>Lilium Group Contracting:</mark>
+      <br><br> 
+      <u>+383 49 300 300</u>
+        <br><br> 
+        <u>+ 383 44 400 400</u>
+        <br>
+        
+        <div class="ContactUs">
   
-  <tr>
-    <td></td>
-    <td></td>
-    <td><br><a href = "mailto: info@liliumgroup.com">careers@liliumgroup.com</a>
-    <br></td>
-  </tr>
-  
-  <tr>
-    <td></td>
-    <td></td>
-    <td><br><mark>Shipping Service Calls:</mark></td>
-  </tr>
-  
-  <tr>
-    <td></td>
-    <td></td>
-    <td><br><a href = "mailto: info@liliumgroup.com">service@liliumgroup.com</a></td>
+          <h4 style="padding: 5px"> Leave us a message</h4>
+          <p id="koha"> </p>
+          
+          <form>
+            <input id="emri" type="text" name="emri" placeholder="Full name"   style="margin-top: 5px"  required><br>
+            <input id="email" type="email" name="Email" placeholder="Email"   style="margin-top: 5px" required><br>
+            <textarea id="mesazhi" type="message" name="mesezh" rows="6" placeholder="Message..." style="margin-top: 5px" required></textarea><br>
+
+            <div class="a3dTra">
+              <input class="button-56" type="submit" value="Submit" style="margin: 5px auto;">
+            </div>
+          </form>
+
+        </div>
+
+    </td>
+               <!--Qeliza 3-->
+    <td  style="vertical-align: top;">
+      <mark>Request for Proposal:</mark>
+      <br><br> 
+      <div >
+        <a href = "mailto: info@liliumgroup.com">info@liliumgroup.com</a>
+        <br><br>
+        <mark>Employment Opportunities:</mark>
+        <br><br>
+        <a href = "mailto: info@liliumgroup.com">careers@liliumgroup.com</a>
+        <br><br>
+        <mark>Shipping Service Calls:</mark>
+        <br><br>
+        <a href = "mailto: info@liliumgroup.com">service@liliumgroup.com</a></td>
+        
+      </div>
+    </td>
   </tr>
 
 </table>
-<div class="ContactUs">
-  <div style="margin-left: 20%;">
-  <h4 style="padding: 5px"> Leave us a message</h4>
-  <p id="koha"> </p>
-<form>
-  <input id="emri" type="text" name="emri" placeholder="Emri" style="margin: 5px auto;" required><br>
-  <input id="email" type="email" name="Email" placeholder="Email" style="margin: 5px auto;" required><br>
-  <textarea id="mesazhi" type="message" name="mesezh" placeholder="Mesazhi" style="margin: 5px auto;" required></textarea><br>
-  <div class="a3dTra"><input class="button-56" type="submit" value="Submit" style="margin: 5px auto;">
-</div>
-</form>
-  </div>
-</div>
-
-<img id="canvas" src="./images/2days.PNG" width="0" height="0">
-<div align="center">
-  
-  <p><button onclick="myCanvas()" class="button-53" style="margin-top: 100px;">How fast do we respond...?</button></p>
-
-<canvas id="myCanvas" width="400" height="300" style="margin: 0px;">
-Your browser does not support the HTML canvas tag.</canvas>
 
 
-</div >
-<script>
-function myCanvas() {
-  var c = document.getElementById("myCanvas");
-  var ctx = c.getContext("2d");
-  var img = document.getElementById("canvas");
-  ctx.drawImage(img,25,25);
-}
-</script>
 <!--Footer-->
 <footer class="footer" id="grad1">
   <div class="footer-col">
@@ -247,5 +251,20 @@ function myCanvas() {
 <p style="text-align: center;  margin-top: 10px;">Created by Grupi <sub>45</sub> &copy 2021 All rights reserved.</p>
 </div>
 <script type="text/javascript" src="contactus.js"></script>
+<script>
+  var x = document.getElementById("geo");
+
+    function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    } else { 
+        x.innerHTML = "Geolocation is not supported by this browser.";
+    }
+    }
+
+    function showPosition(position) {
+    x.innerHTML = position.coords.latitude + "&deg;, " + position.coords.longitude + "&deg; ";
+    }
+</script>
   </body>
 </html>
