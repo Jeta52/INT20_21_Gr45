@@ -24,7 +24,22 @@
             border: 2px solid  #9951e0;
             border-radius: 4px;
         }
+        #showhide{
+          text-align: center
+        }
   </style>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="jquery-3.6.0.min"></script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+        $("#hide").click(function(){
+        $(".detyra").hide();
+       });
+        $("#show").click(function(){
+       $(".detyra").show();
+      });
+      });
+      </script>
 
   <head>
     <title>Lilium</title>
@@ -161,7 +176,7 @@
         <source src="./images/audio2.mp3" type="audio/mp3">
       </audio>
     </div>
-    <div align="center" style="font-size: 30px;">
+    <div align="center" style="font-size: 30px;" class="detyra">
       <table>
           <tr>
               <td> &#127804; <i>+</i>  &#127804;<i>+</i>   &#127804;  <i> = 30 </i></td>
@@ -179,13 +194,22 @@
       </table>
   </div>
 
-          <div align="center">
+          <div align="center" class="detyra">
               <form name="detyra" onsubmit="return detyraArgetuese()">
               <input type="number" name="answer">
               <keygen name="security">
               <input type="submit" value="Submit" id="submit"></input>
               </form>
+             
         </div>
+        
+
+        <div id="showhide">
+            <button id="hide"  style="margin:auto">Hide the game</button>
+        <button id="show" style="margin:auto">Show the game</button>
+      </div>
+          
+        
   
     <!--Footer-->
     <div id="grad">
