@@ -2,15 +2,17 @@
 <html lang="en">
 
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Lilium</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="jquery-3.6.0.min"></script>
+
+    <title>Lilium</title>
+
     <script type="text/javascript">
         $(function(){
             $(".karta").hover(function(){
@@ -22,8 +24,8 @@
         $(function(){
             $("div").click(function()
             {
-               $(".divVid").fadeToggle("slow");
-               $("#divTXT").fadetoggle("slow");
+               $(".divVid").fadeToggle();
+               $("#divTXT").fadetoggle();
               
             });
 
@@ -31,26 +33,36 @@
     </script> 
 
     <style>
-    table td img{
+        #Outer {
+          padding-top: 40px;
+          display: none;
+        }
+        #Outer2 {
+          display: none;
+        }
+        table td img{
         width:300px ;
         height:402px;
         border-radius: 2%; 
         border-style: solid;
         border-width: 1px;
         border-color: #C1A2E1;
-    }
-    table td img:hover {
+        }
+        table td img:hover {
         transform: scale(1.01, 1.01);
-    }
-    table{
+        }
+        table{
         margin: 0px auto;
-    }
-    h1 {
-  text-shadow: 4px 4px rgb(184, 181, 181);
-}
+        }
+        h1 {
+        text-shadow: 4px 4px rgb(184, 181, 181);
+        }
+        #btn:hover{
+            transform: scale(1.3,2);
+        }
 
 </style>
-   
+
 </head>
 
 <body>
@@ -171,25 +183,45 @@
         <td><a href="login.html"><button class="button" style="vertical-align:middle"><span class="karta">Add to cart </span></button></a></td>
     </tr>
 </table>
-<br><br><br><br><br>
 
-<canvas style="width:1300px; height: 10px; margin: 0px;" id="myCanvas"> </canvas>
 
-<!--SVG-->
-<svg id=svg >
-	<defs>
-	<g id="flower">
-		<path class="fc1" fill="none" stroke="#333333" stroke-width="1" 
-			  d="M0,0 q50,-25 100,0 q-50,25 -100,0 q-50,25 -100,0 q50,-25 100,0"/>	
-		<path class="fc2" fill="none" stroke="#333333" stroke-width="1"
-					d="M0,0 q53.03,-17.68 70.71,-70.71 q-53.03,17.68 -70.71,70.71 q-53.03,17.68 -70.71,70.71 q53.03,-17.68 70.71,-70.71"/>
-		<path class="fc3" fill="none" stroke="#333333" stroke-width="1"
-				  d="M0,0 q25,-50 0,-100 q-25,50 0,100 q-25,50 0,100 q25,-50 0,-100"/>
-		<path class="fc4" fill="none" stroke="#333333" stroke-width="1"
-				  d="M0,0 q-17.68,-53.03 -70.71,-70.71 q17.68,53.03 70.71,70.71 q17.68,53.03 70.71,70.71 q-17.68,-53.03 -70.71,-70.71"/>
-	</g>
-	</defs>
-</svg>
+ <!--Tabela per show-->
+
+        <br><br>
+
+        <h1  id= "Outer">Recommended</h1>
+      
+    <table  id= "Outer2">
+        <tr>
+            <td>
+                    <img src="./images/TheAmethyst.jpg" alt="sale1">
+            </td>
+            <td>
+                    <img src="./images/TheEllington.jpg" alt="sale2">
+            </td>
+            <td>
+                    <img src="./images/TheManor.jpg" alt="sale3">
+            </td>
+        </tr>
+        <tr >
+            <td ><p style="text-align: left;"><i><b>The Amethyst</b></i></p></td>
+            <td><p style="text-align: left;"><i><b>The Ellington</b></i></p></td>
+            <td><p style="text-align: left;"><i><b>The Manor</b></i></p></td>
+        </tr>
+        <tr>
+            <td><p style="text-align: left; font-size: 24px;">95 &euro;</p></td>
+            <td><p style="text-align: left; font-size: 24px;"> 90 &euro;</p></td>
+            <td><p style="text-align: left; font-size: 24px;">68 &euro;</p></td>
+        </tr>
+        <tr>
+            <td><a href="login.html"><button class="button" style="vertical-align:middle"><span>Add to cart </span></button></a></td>
+            <td><a href="login.html"><button class="button" style="vertical-align:middle"><span>Add to cart </span></button></a></td>
+            <td><a href="login.html"><button class="button" style="vertical-align:middle"><span>Add to cart </span></button></a></td>
+        </tr>
+    </table>
+
+
+    <canvas  id = "btn" style=" height: 10px; width: 300px;  margin: 50px 0px 50px 37%;"> </canvas>
 
 
 <div align="center" style=" margin-bottom: 50px;">
@@ -254,16 +286,23 @@
   </div>
 </body>
 
-<SCRipt>
-    var c = document.getElementById("myCanvas");
-    var ctx= c.getContext("2d");
-    var grd = ctx.createLinearGradient(20,0,400,400);
-    grd.addColorStop(0, "pink");
-    grd.addColorStop(1,"blue");
-    ctx.fillStyle =grd;
-    ctx.fillRect(50,20,300,100);
-</SCRipt>
 
-<script type="text/javascript" src="index.js"></script>
+<script> 
+        $(document).ready(function() {
+            $("#btn").click(function() {
+                $("#Outer").show("linear");
+                $("#Outer2").show("linear");
+            });
+        });
+        
+        var c = document.getElementById("btn");
+        var ctx= c.getContext("2d");
+        var grd = ctx.createLinearGradient(20,0,400,400);
+        grd.addColorStop(0, "pink");
+        grd.addColorStop(1,"blue");
+        ctx.fillStyle =grd;
+        ctx.fillRect(50,20,300,100);
+    </script>
+
 
 </html>
