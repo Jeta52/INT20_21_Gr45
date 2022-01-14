@@ -65,21 +65,9 @@
       <script type="text/javascript">
         $(document).ready(function()
         {
-           $("#p1").click(function()
+           $("p").click(function()
          {
            $(".videof").hide();
-       
-         });
-        });
-
-        $(document).ready(function()
-        {
-           $("#p2").click(function()
-         {
-          $("#audio1").hide("slow", function(){
-              alert("Audiot nuk do të shfaqën më!");
-            });
-            $("#audio2").hide();
        
          });
         });
@@ -203,23 +191,20 @@
         Your browser does not support the canvas element.
       </canvas>
     </div> 
-    <p id="p1"><i>Do not show the video</i></p>
+    <p style="color:rgb(202, 199, 199);"><i>Do not show the video</i></p>
     <div align="center" class="videof">
       <video style="width: 70%; border-radius: 1%;" controls>
         <source src="./images/video1.mp4" type="video/mp4">
       </video>
     </div>
-
-    <p id="p2" style="text-align: center;"><i>Do not show the audios</i></p>
-
-    <div align="center" id="audio1">
+    <div align="center">
       <h2>How to Open a Flower Shop Right | Six Things to do Before Starting</h2>
       <audio controls>
         <source src="./images/audio1.mp3" type="audio/mp3">
       </audio>
     </div>
   
-    <div align="center" style="margin-bottom: 50px;" id="audio2">
+    <div align="center" style="margin-bottom: 50px;">
     <h2>The Power of Flowers | Lewis Miller | TEDxCharlottesville</h2>
       <audio controls>
         <source src="./images/audio2.mp3" type="audio/mp3">
