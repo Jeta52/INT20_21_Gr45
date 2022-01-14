@@ -33,7 +33,17 @@
         transform: scale(1.01, 1.01);
     }
    
-  
+    #panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #fcf5ed;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
  
 </style>
   <head>
@@ -42,6 +52,16 @@
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="occasions.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="jquery-3.6.0.min"></script>
+<script>
+    $(document).ready(function(){
+      $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+      });
+    });
+  </script>
   </head>
 
   <body> 
@@ -280,5 +300,8 @@
 <div>
 <p style="text-align: center;  margin-top: 10px;">Created by Grupi <sub>45</sub> &copy 2021 All rights reserved.</p>
 </div>
+<div id="flip">Click to slide down a fact about flowers</div>
+    <div id="panel"><i>"Scientists managed to resurrect a 32,000 years old Arctic flower in Siberia by using seeds buried by an Ice Age squirrel.".</i>
+
 </body>
 </html>

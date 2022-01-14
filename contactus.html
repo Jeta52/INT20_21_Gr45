@@ -41,6 +41,17 @@
    #test{
        display: none;
    }
+   #panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #fcf5ed;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
 </style>
 
 <head>
@@ -93,9 +104,14 @@ $(function(){
   }
   function sayHello()
   {
-    alert("Hello From..");
+    alert("Hello From Lilium Flowr Shop");
 
   }
+  $(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
 </script>
 
  
@@ -286,6 +302,9 @@ $(function(){
         alert( $("#test").text());
       });
     });
+    
 </script>
+<div id="flip">Click to slide down a fact about flowers</div>
+  <div id="panel"><i>"Moon flowers are called that because they bloom only at night and close during the day."</i>
   </body>
 </html>

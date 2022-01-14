@@ -49,6 +49,17 @@
             border: 1px solid  #dfda41;
             border-radius: 4px;
         }
+        #panel, #flip {
+  padding: 5px;
+  text-align: center;
+  background-color: #fcf5ed;
+  border: solid 1px #c3c3c3;
+}
+
+#panel {
+  padding: 50px;
+  display: none;
+}
   </style>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       <script src="jquery-3.6.0.min"></script>
@@ -83,6 +94,11 @@
        
          });
         });
+        $(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
       </script>
 
 
@@ -308,8 +324,8 @@
           Created by Grupi <sub>45</sub> &copy 2021 All rights reserved.</p>
      </div>
   </div>
-
-
+  <div id="flip">Click to slide down a fact about flowers</div>
+  <div id="panel"><i>"The largest flower in the world can be up to ten feet tall and three feet wide, and it can weigh up to 24 pounds! It is called the Titan Arum and it has a distinctive smell of rotting flesh, hence why it is also known as the "corpse flower".</i>
 <script type="text/javascript" src="about.js"></script>
   </body>
   
