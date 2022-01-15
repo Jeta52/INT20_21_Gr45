@@ -9,6 +9,8 @@ var datetime =  currentdate.getDate() + "/"
 
 document.getElementById("koha").innerHTML = datetime;
 
+
+//javascript per add dhe remove
 $(document).ready(function(){
 
     // Add new element

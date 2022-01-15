@@ -28,30 +28,30 @@
       transform: skewX(5deg);
     }
  
-    .pQ1{
-     margin: 0;
-   }
-   #emri, #email{
-     width: 70%;
-     height: 20px;
-   }
-   #mesazhi{
-    width: 70%;
-   }
-   #test{
-       display: none;
-   }
-   #panel, #flip {
-  padding: 5px;
-  text-align: center;
-  background-color: #fcf5ed;
-  border: solid 1px #c3c3c3;
-}
+      .pQ1{
+      margin: 0;
+    }
+    #emri, #email{
+      width: 70%;
+      height: 20px;
+    }
+    #mesazhi{
+      width: 70%;
+    }
+      #test{
+          display: none;
+      }
+     #panel, #flip {
+      padding: 5px;
+      text-align: center;
+      background-color: #fcf5ed;
+      border: solid 1px #c3c3c3;
+    }
 
-#panel {
-  padding: 50px;
-  display: none;
-}
+    #panel {
+      padding: 50px;
+      display: none;
+    }
 </style>
 
 <head>
@@ -83,49 +83,42 @@ $(function(){
   });
 }
 );
-</script>
+// js per web workers
+var w;
 
-<script>
-  function bigLoop()
-  {
-    if(Modernizr.webworkers)
-    {
-      var worker = new Worker('bigLoop.js');
-      worker.onmessage = function (event)
-      {
-        alert("Complicated "+ event.data + " iterations");
-    
-      };
-
+function startWorker() {
+  if(typeof(Worker) !== "undefined") {
+    if(typeof(w) == "undefined") {
+      w = new Worker("demo_workers.js");
     }
-    else 
-    {
-      alert("Sorry !! you do not have web workers support.");
-    }
+    w.onmessage = function(event) {
+      document.getElementById("result").innerHTML = event.data;
+    };
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Workers...";
   }
-  function sayHello()
-  {
-    alert("Hello From Lilium Flowr Shop");
+}
 
-  }
-  $(document).ready(function(){
+function stopWorker() { 
+  w.terminate();
+  w = undefined;
+}
+
+
+// js per slide
+$(document).ready(function(){
   $("#flip").click(function(){
     $("#panel").slideToggle("slow");
   });
 });
 </script>
 
- 
-
-
-
 </head>
 
-<body onload="getLocation()">
+<body onload="getLocation(); startWorker()">
   
-  <input type="button" onclick=" bigLoop()" value="Big Loop"/>
-  <input type="button" onclick=" sayHello()" value="Say Hello"/>
-  
+<span style="margin-top: 0px; margin-bottom: 0px; text-align: right; background-color: #C1A2E1; border-radius: 2px;">Active for: <output id="result"></output> seconds.</span>
+
   
   <div style="text-align: center; width: 100%;">
     <div  class="div1" style="width: 83%;">
