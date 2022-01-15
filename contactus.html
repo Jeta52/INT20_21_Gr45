@@ -84,15 +84,16 @@ $(function(){
 }
 );
 </script>
+
 <script>
   function bigLoop()
   {
     if(Modernizr.webworkers)
     {
-      var worker = new Worker ('jquery-3.6.0.min.js');
+      var worker = new Worker('bigLoop.js');
       worker.onmessage = function (event)
       {
-        alert("Complicated"+ event.data + "iterations");
+        alert("Complicated "+ event.data + " iterations");
     
       };
 
